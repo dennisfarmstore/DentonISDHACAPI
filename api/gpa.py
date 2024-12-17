@@ -18,7 +18,7 @@ class handler(BaseHTTPRequestHandler):
         session = getRequestSession(username, password)
 
         transcriptPageContent = session.get(
-            "https://hac.friscoisd.org/HomeAccess/Content/Student/Transcript.aspx").text
+            "https://denhac.dentonisd.org/HomeAccess/Content/Student/Transcript.aspx").text
 
         parser = BeautifulSoup(transcriptPageContent, "lxml")
 
