@@ -3,7 +3,7 @@ fakeStudentInfo = {
     "campus": "Heritage High School",
     "grade": "12",
     "id": "123456",
-    "name": "Doe, Jonh Thomas",
+    "name": "Doe, John Thomas",
     "counselor": "NELSON-MOON, LANNIS",
 }
 
