@@ -16,7 +16,7 @@ class handler(BaseHTTPRequestHandler):
 
     session = getRequestSession(username, password)
 
-    registrationPageContent = session.get("https://hac.friscoisd.org/HomeAccess/Content/Student/Registration.aspx").text
+    registrationPageContent = session.get("https://denhac.dentonisd.org/HomeAccess/Content/Student/Registration.aspx").text
 
     parser =  BeautifulSoup(registrationPageContent, "lxml")
 
@@ -33,7 +33,7 @@ class handler(BaseHTTPRequestHandler):
     try:
       studentId = parser.find(id="plnMain_lblRegStudentID").text
     except:
-      schedulePageContent = session.get("https://hac.friscoisd.org/HomeAccess/Content/Student/Classes.aspx")
+      schedulePageContent = session.get("https://denhac.dentonisd.org/HomeAccess/Content/Student/Classes.aspx")
       parser =  BeautifulSoup(schedulePageContent, "lxml")
       studentId = parser.find(id="plnMain_lblRegStudentID").text
 
